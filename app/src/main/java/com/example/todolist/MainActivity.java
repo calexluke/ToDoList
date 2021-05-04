@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         cursor.close();
         db.close();
 
+        updateUI();
+
     }
 
     @Override
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                                         values,
                                         SQLiteDatabase.CONFLICT_REPLACE);
                                 db.close();
+                                updateUI();
 
                             }
                         })
